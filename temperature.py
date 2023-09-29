@@ -17,21 +17,29 @@
     22.357142857142858
 
 '''
-
 from typing import List
+temperatures = [20.5, 22.0, 18.5, 25.5, 26.0, 23.5, 19.0]
 
 def calculate_average_temperature(temperatures: List[float]) -> float:
+
      # 1.1 TODO: # Initialize an accumulator variable to keep track of the sum of temperatures.
-   
-    
+    sum_temp = 0
+    len_temp = len(temperatures)
     # 1.2 TODO:# Iterate through the `temperatures` list, updating the accumulator with the current temperature.
+    for temp in temperatures:
+        sum_temp += temp
+        avg_temp = sum_temp / len_temp
+    if len_temp == 0:
+        return None
+    else:
+        return avg_temp
+    
+ 
 
     
     # 1.3 TODO: # Calculate and return the average temperature using the accumulated sum and the total number of readings.
 
 
-    
-    # 1.3 TODO: return the average temperature
-    
 
-#calculate_average_temperature()
+    
+    # 1.3 TODO: return the average temperature 
